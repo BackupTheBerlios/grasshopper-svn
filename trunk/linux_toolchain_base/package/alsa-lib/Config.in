@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ALSA_LIB
+	bool "ALSA library"
+	default n
+	help
+		The ALSA library with the standard plugins

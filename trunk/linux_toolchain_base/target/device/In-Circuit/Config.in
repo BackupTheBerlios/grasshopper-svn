@@ -1,0 +1,29 @@
+config BR2_BOARD_ICNOVA
+	bool "ICNova support"
+	depends on BR2_avr32
+	default n
+	select BR2_PACKAGE_LINUX
+	select BR2_PTHREADS_OLD
+	help
+	  One of the ICNova-boards build by In-Circuit
+
+choice
+	prompt "Board type"
+	depends on BR2_BOARD_ICNOVA
+	default BR2_BOARD_ICNOVA_BASE
+
+config BR2_BOARD_ICNOVA_MAC
+	bool "ICnova with two Ethernet Ports"
+
+config BR2_BOARD_ICNOVA_VGA
+	bool "ICNova with VGA-Port"
+
+config BR2_BOARD_ICNOVA_BASE
+	bool "ICNova Base"
+
+endchoice
+
+config BR2_BOARD_ICNOVA_CP2102
+	depends on BR2_BOARD_ICNOVA_BASE
+	bool "Board has a CP2102"
+

@@ -1,0 +1,19 @@
+config BR2_PACKAGE_ALSA_TOOLS
+	bool "ALSA tools"
+	default n
+	help
+		Some Tools for specific Sound-Hardware
+
+		us428control - Controller utility for Tascam US-X2Y
+		sbiload - OPL2/3 FM instrument loader for the ALSA sequencer
+		as10k1 - An assembler for the EMU10K1 (EMU10K2) DSP chip
+		ac3dec - A free AC-3 stream decoder                                            
+		omixer - control tool for Echoaudio soundcards
+		envy24control - control tool for Envy24 (ice1712) based 
+			soundcards
+		hdspconf - GUI program to control the Hammerfall HDSP Alsa 
+			Settings.
+		hdspmixer - tool to control the advanced routing features of the			RME Hammerfall DSP.
+		rmedigicontrol - control tool for RME Digi32 and RME Digi96
+			soundcards
+

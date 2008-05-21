@@ -1,0 +1,22 @@
+#!/bin/sh
+case "$1" in
+	start|"")
+		echo Starting telnetd
+		/usr/bin/telnetd
+	;;
+	stop)
+		echo Stopping telnetd
+		if [ -n "$(pidof telnetd)" ]; then
+			kill $(pidof telnetd);
+		else
+			echo telnetd not running!
+			return 1
+		fi
+	;;
+	*)
+		echo "Usage: $0 [start|stop]"
+		exit 255
+	;;
+esac
+
+return 0

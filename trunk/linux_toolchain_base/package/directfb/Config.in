@@ -1,0 +1,24 @@
+config BR2_PACKAGE_DIRECTFB
+	bool "directfb"
+	default n
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_JPEG
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_LIBSYSFS
+	select BR2_PACKAGE_FREETYPE
+	help
+
+	http://www.directfb.org/
+
+config BR2_DIRECTFB_FUSION
+	bool "  fusion"
+	default n
+	depends on BR2_PACKAGE_DIRECTFB
+	help
+		Enable DirectFB-Fusion Support
+
+config BR2_DIRECTFB_MULTI
+	bool "  Multi Application Core"
+	default n
+	depends on BR2_PACKAGE_DIRECTFB
+	select BR2_DIRECTFB_FUSION

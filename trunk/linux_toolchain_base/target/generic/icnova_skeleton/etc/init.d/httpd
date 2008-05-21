@@ -1,0 +1,22 @@
+#!/bin/sh
+case "$1" in
+	start|"")
+		echo Starting httpd
+		cd /var/www; /usr/sbin/httpd
+	;;
+	stop)
+		echo Stopping httpd
+		if [ -n "$(pidof httpd)" ]; then
+			kill $(pidof httpd);
+		else
+			echo httpd not running!
+			return 1
+		fi
+	;;
+	*)
+		echo "Usage: $0 [start|stop]"
+		exit 255
+	;;
+esac
+
+return 0

@@ -1,0 +1,29 @@
+ifeq ($(BR2_PTHREADS_NONE),y)
+THREADS:=--disable-threads
+else
+THREADS:=--enable-threads
+endif
+
+ifeq ($(BR2_ENABLE_MULTILIB),y)
+MULTILIB:=--enable-multilib
+else
+MULTILIB:=--disable-multilib
+endif
+
+ifeq ($(BR2_PREFER_STATIC_LIB),y)
+PREFERRED_LIB_FLAGS:=--enable-static --disable-shared
+else
+PREFERRED_LIB_FLAGS:=--disable-static --enable-shared
+endif
+
+
+# FIXME -- this is temporary
+OPTIMIZE_FOR_CPU=$(ARCH)
+
+# late binding check to see if the target cc supports -fwhole-program
+CFLAGS_WHOLE_PROGRAM = $(call cc-option,-fwhole-program,)
+# gcc-3.4 would need -combine, I only support 4.2, which correctly uses '--'
+CFLAGS_COMBINE = $(call cc-option,--combine,)
+
+# gcc has a bunch of needed stuff....
+include toolchain/gcc/Makefile.in

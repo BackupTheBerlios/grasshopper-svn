@@ -1,0 +1,8 @@
+config BR2_PACKAGE_FUSIONSOUND
+	bool "Fusion-Sound"
+	default n
+	select BR2_PACKAGE_DIRECTFB
+	select BR2_DIRECTFB_FUSION
+	select BR2_PACKAGE_LIBVORBIS
+	help
+		The Fusion-Sound Modul of DirectFB
