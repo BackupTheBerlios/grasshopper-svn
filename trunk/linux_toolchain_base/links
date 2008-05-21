@@ -1,0 +1,63 @@
+# To generate this file use:
+# find . -type l | xargs ls -l | sed -e 's/.*\s\([./a-zA-Z0-9_-]*\)\s->\s\([./a-zA-Z0-9_-]*\)/ln -s \2 \1/' > links
+
+# To delete all links (afterwards) use
+# find . -type l | xargs rm
+
+ln -s ../tmp/log ./target/device/AMD/DBAu1500/target_skeleton/dev/log
+ln -s ../proc/mounts ./target/device/AMD/DBAu1500/target_skeleton/etc/mtab
+ln -s ../tmp/resolv.conf ./target/device/AMD/DBAu1500/target_skeleton/etc/resolv.conf
+ln -s ../../tmp ./target/device/AMD/DBAu1500/target_skeleton/var/lib/pcmcia
+ln -s ../tmp ./target/device/AMD/DBAu1500/target_skeleton/var/lock
+ln -s ../tmp ./target/device/AMD/DBAu1500/target_skeleton/var/log
+ln -s ../tmp ./target/device/AMD/DBAu1500/target_skeleton/var/pcmcia
+ln -s ../tmp ./target/device/AMD/DBAu1500/target_skeleton/var/run
+ln -s ../tmp ./target/device/AMD/DBAu1500/target_skeleton/var/spool
+ln -s ../tmp ./target/device/AMD/DBAu1500/target_skeleton/var/tmp
+ln -s ../tmp/log ./target/device/jp/q5/target_skeleton/dev/log
+ln -s ../proc/mounts ./target/device/jp/q5/target_skeleton/etc/mtab
+ln -s ../tmp/resolv.conf ./target/device/jp/q5/target_skeleton/etc/resolv.conf
+ln -s ../../tmp ./target/device/jp/q5/target_skeleton/var/lib/pcmcia
+ln -s ../tmp ./target/device/jp/q5/target_skeleton/var/lock
+ln -s ../tmp ./target/device/jp/q5/target_skeleton/var/log
+ln -s ../tmp ./target/device/jp/q5/target_skeleton/var/pcmcia
+ln -s ../tmp ./target/device/jp/q5/target_skeleton/var/run
+ln -s ../tmp ./target/device/jp/q5/target_skeleton/var/spool
+ln -s ../tmp ./target/device/jp/q5/target_skeleton/var/tmp
+ln -s ../proc/mounts ./target/generic/target_busybox_skeleton/etc/mtab
+ln -s ../tmp/resolv.conf ./target/generic/target_busybox_skeleton/etc/resolv.conf
+ln -s ../tmp ./target/generic/target_busybox_skeleton/var/cache
+ln -s ../../tmp ./target/generic/target_busybox_skeleton/var/lib/pcmcia
+ln -s ../tmp ./target/generic/target_busybox_skeleton/var/lock
+ln -s ../tmp ./target/generic/target_busybox_skeleton/var/log
+ln -s ../tmp ./target/generic/target_busybox_skeleton/var/pcmcia
+ln -s ../tmp ./target/generic/target_busybox_skeleton/var/run
+ln -s ../tmp ./target/generic/target_busybox_skeleton/var/spool
+ln -s ../tmp ./target/generic/target_busybox_skeleton/var/tmp
+ln -s ../tmp/log ./target/generic/target_skeleton/dev/log
+ln -s ../proc/mounts ./target/generic/target_skeleton/etc/mtab
+ln -s ../tmp/resolv.conf ./target/generic/target_skeleton/etc/resolv.conf
+ln -s ../tmp ./target/generic/target_skeleton/var/cache
+ln -s ../../tmp ./target/generic/target_skeleton/var/lib/pcmcia
+ln -s ../tmp ./target/generic/target_skeleton/var/lock
+ln -s ../tmp ./target/generic/target_skeleton/var/log
+ln -s ../tmp ./target/generic/target_skeleton/var/pcmcia
+ln -s ../tmp ./target/generic/target_skeleton/var/run
+ln -s ../tmp ./target/generic/target_skeleton/var/spool
+ln -s ../tmp ./target/generic/target_skeleton/var/tmp
+ln -s ../init.d/boottime target/generic/icnova_skeleton/etc/rc.d/S01boottime.sh
+ln -s ../init.d/logging target/generic/icnova_skeleton/etc/rc.d/S10logging.sh
+ln -s ../init.d/network target/generic/icnova_skeleton/etc/rc.d/S10network.sh
+ln -s ../init.d/urandom target/generic/icnova_skeleton/etc/rc.d/S10urandom.sh
+ln -s ../init.d/httpd target/generic/icnova_skeleton/etc/rc.d/S20httpd.sh
+ln -s ../init.d/telnetd target/generic/icnova_skeleton/etc/rc.d/S20telnetd.sh
+ln -s ../init.d/udhcpd target/generic/icnova_skeleton/etc/rc.d/S20udhcpd.sh
+ln -s ../init.d/inetd target/generic/icnova_skeleton/etc/rc.d/S20inetd.sh
+ln -s ../tmp target/generic/icnova_skeleton/var/cache
+ln -s ../../tmp target/generic/icnova_skeleton/var/lib/pcmcia
+ln -s ../tmp target/generic/icnova_skeleton/var/lock
+ln -s ../tmp target/generic/icnova_skeleton/var/log
+ln -s ../tmp target/generic/icnova_skeleton/var/pcmcia
+ln -s ../tmp target/generic/icnova_skeleton/var/run
+ln -s ../tmp target/generic/icnova_skeleton/var/spool
+ln -s ../tmp target/generic/icnova_skeleton/var/tmp
