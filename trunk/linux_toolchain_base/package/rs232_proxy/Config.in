@@ -1,8 +1,0 @@
-config BR2_PACKAGE_RS232PROXY
-	bool "rs232_proxy"
-	default n
-	help
-		gets 802.15.4 Packeages over rs232 and sends them to all 
-		connected network clients.
-
-

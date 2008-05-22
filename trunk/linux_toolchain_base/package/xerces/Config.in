@@ -1,7 +1,0 @@
-config BR2_PACKAGE_XERCES
-	bool "xerces"
-	default n
-	help
-	  Xerces-C++ is a validating XML parser written in portable C++.
-
-	  http://xml.apache.org/xerces-c/

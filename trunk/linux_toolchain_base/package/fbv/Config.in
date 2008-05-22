@@ -1,9 +1,0 @@
-config BR2_PACKAGE_FBV
-	bool "FrameBuffer Viewer"
-	default n
-	select BR2_PACKAGE_FBSET
-	select BR2_PACKAGE_LIBPNG
-	select BR2_PACKAGE_JPEG
-	help
-	  Excellent image file viewer.
-
