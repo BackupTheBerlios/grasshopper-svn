@@ -1,0 +1,5 @@
+config BR2_PACKAGE_DEMO
+	bool "ICnova Demo"
+	default n
+	help
+	  Some Code-Examples to show the basic usage of the board.

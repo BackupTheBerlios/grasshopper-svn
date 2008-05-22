@@ -1,0 +1,8 @@
+LINUX26_KCONFIG:=target/device/Atmel/stk1000/linux26.config
+TARGETS += linux26
+
+ifndef UCLIBC_CONFIG_FILE
+UCLIBC_CONFIG_FILE:=target/device/Atmel/stk1000/uclibc.config
+endif
+
+BR2_DEFAULT_KERNEL_HEADERS:="2.6.20"

@@ -1,0 +1,13 @@
+BR2_BOARD_PATH=target/device/Atmel/carmeva
+
+LINUX26_KCONFIG:=$(BR2_BOARD_PATH)/linux26.carmeva.config
+TARGETS+=linux26
+
+ifndef UCLIBC_CONFIG_FILE
+UCLIBC_CONFIG_FILE:=$(BR2_BOARD_PATH)/uClibc.carmeva.config
+endif
+
+# pin some settings
+BR2_DEFAULT_KERNEL_HEADERS:="2.6.20"
+
+LINUX26_FORMAT=zImage

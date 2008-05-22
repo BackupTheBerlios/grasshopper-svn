@@ -1,0 +1,10 @@
+# Configure Loopback
+auto lo eth0
+iface lo inet loopback
+
+iface eth0 inet static
+	address 153.96.107.124
+	netmask 255.255.255.0
+	broadcast 153.96.255.255
+	gateway 153.96.107.154
+

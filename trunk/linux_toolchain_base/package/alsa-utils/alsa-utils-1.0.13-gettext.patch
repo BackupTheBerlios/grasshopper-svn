@@ -1,0 +1,21 @@
+diff -Naur alsa-utils-1.0.13/seq/aseqnet/Makefile.am alsa-utils-1.0.13.patched/seq/aseqnet/Makefile.am
+--- alsa-utils-1.0.13/seq/aseqnet/Makefile.am	2006-09-29 13:53:26.000000000 +0200
++++ alsa-utils-1.0.13.patched/seq/aseqnet/Makefile.am	2007-06-07 13:36:47.000000000 +0200
+@@ -1,5 +1,6 @@
+ INCLUDES = -I$(top_srcdir)/include
+ EXTRA_DIST = README.aseqnet aseqnet.1
++LDFLAGS = -lintl
+ 
+ bin_PROGRAMS = aseqnet
+ aseqnet_SOURCES = aseqnet.c
+diff -Naur alsa-utils-1.0.13/seq/aseqnet/Makefile.in alsa-utils-1.0.13.patched/seq/aseqnet/Makefile.in
+--- alsa-utils-1.0.13/seq/aseqnet/Makefile.in	2006-09-29 13:54:52.000000000 +0200
++++ alsa-utils-1.0.13.patched/seq/aseqnet/Makefile.in	2007-06-07 13:36:47.000000000 +0200
+@@ -107,6 +107,7 @@
+ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ LDFLAGS = @LDFLAGS@
++AM_LDFLAGS = -lintl
+ LIBICONV = @LIBICONV@
+ LIBINTL = @LIBINTL@
+ LIBOBJS = @LIBOBJS@

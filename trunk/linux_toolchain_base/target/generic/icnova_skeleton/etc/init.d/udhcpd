@@ -1,0 +1,22 @@
+#!/bin/sh
+case "$1" in
+	start|"")
+		echo Starting DHCP Daemon
+		udhcpd /etc/udhcpd.conf
+	;;
+	stop)
+		echo Stopping DHCP Daemon
+		if [ -n "$(pidof udhcpd)" ]; then
+			kill $(pidof udhcpd);
+		else
+			echo udhcpd not running!
+			return 1
+		fi
+	;;
+	*)
+		echo "Usage: $0 [start|stop]"
+		exit 255
+	;;
+esac
+
+return 0
