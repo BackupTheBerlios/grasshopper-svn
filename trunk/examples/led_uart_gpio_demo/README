@@ -1,0 +1,22 @@
+This directory contains some code to demonstrate how to use the GPIO-Pins, the
+LEDs and the USARTs of the ICnova.
+
+The code can freely be used in other projects of our customers.
+
+The easiest way to use the code is to use the interface described in the
+Header-files led.h, gpio.h and uart.h. The only thing you have to do is linking
+your program against libicnova. This is done by passing -licnova to the linker.
+An example of how this is done, can be seen in icnova-demo.c.
+
+The other way is to do all the work by hand. Most of it is some work with
+different files. Even if it looks unused to some users, all the files used
+are exported by the kernel in some virtual file-systems. So those files doesn't
+exist in real somewhere on your disk, but are created and removed on the fly
+by the linux kernel and are used to control the behaviour of the drivers.
+The implementation of this can be seen in the files led.c, gpio.c and uart.c.
+
+To compile your program afterwards, you just need to use the toolchain for the
+avr32. If you don't use our buildroot and want to use the library, you have to 
+make sure, that the compile finds that as well as the header-files.
+The header-files can be found in this directory, the library on the icnova.
+

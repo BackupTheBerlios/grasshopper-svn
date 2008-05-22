@@ -1,0 +1,11 @@
+ifeq ($(BR2_avr32),y)
+include target/device/Atmel/AVR32/Makefile.in
+endif
+
+ifeq ($(BR2_BOARD_STK1000),y)
+include target/device/Atmel/stk1000/Makefile.in
+endif
+
+ifeq ($(BR2_TARGET_ARM_CARMEVA),y)
+include target/device/Atmel/carmeva/Makefile.in
+endif

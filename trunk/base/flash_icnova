@@ -1,0 +1,4 @@
+#!/bin/sh
+avr32program program -v -e -f cfi@0 u-boot.bin
+sleep 3
+avr32program program -v -e -f cfi@0 -F bin -O 0x00030000 -R -r rootfs.avr32.jffs2

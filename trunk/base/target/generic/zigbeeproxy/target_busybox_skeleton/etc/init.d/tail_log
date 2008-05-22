@@ -1,0 +1,18 @@
+#!/bin/bash
+case "$1" in
+	start)
+		echo -n Starting to print syslog
+		(/usr/bin/tail -fn0 /var/log/messages &)
+		echo .
+	;;
+	stop)
+		echo -n Stopping printing syslog
+		start-stop-daemon -K -x /usr/bin/tail
+		echo .
+	;;
+	*)
+		echo Usage: $0 [start|stop]
+	;;
+esac
+
+exit 0

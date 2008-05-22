@@ -1,0 +1,14 @@
+diff -Naur irda-utils-0.9.18/irdaping/irdaping.c irda-utils-0.9.18.patch/irdaping/irdaping.c
+--- irda-utils-0.9.18/irdaping/irdaping.c	2006-07-11 08:16:06.000000000 +0200
++++ irda-utils-0.9.18.patch/irdaping/irdaping.c	2007-06-14 17:16:31.000000000 +0200
+@@ -100,9 +100,8 @@
+ void cleanup(int signo)
+ {
+ 	fflush(stdout);
+-	putc('\n', stdout);
+ 
+-	printf("%d packets received by filter\n", self.packets);
++	printf("\n%d packets received by filter\n", self.packets);
+ 	
+ 	exit(0);
+ }

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_SAWMAN
+	bool "SawMan"
+	default y
+	select BR2_PACKAGE_DIRECTFB
+	select BR2_DIRECTFB_MULTI
+	help
+		A multi-Application Window-Manager for DirectFB

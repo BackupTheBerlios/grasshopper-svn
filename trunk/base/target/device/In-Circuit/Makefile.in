@@ -1,0 +1,4 @@
+ifeq ($(strip $(BR2_BOARD_ICNOVA)),y)
+include target/device/In-Circuit/ICNova/Makefile.in
+endif
+
