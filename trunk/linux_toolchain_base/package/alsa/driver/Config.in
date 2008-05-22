@@ -1,5 +1,0 @@
-config BR2_PACKAGE_ALSA_DRIVER
-	bool "ALSA driver"
-	default n
-	help
-		Additional Soundcard-Drivers for ALSA

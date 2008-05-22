@@ -1,5 +1,0 @@
-config BR2_PACKAGE_LIBVORBIS
-	bool "libvorbis"
-	default n
-	help
-		Library for Playing Ogg/Vorbis-Coded Music

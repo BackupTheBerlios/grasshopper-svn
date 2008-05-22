@@ -1,6 +1,0 @@
-AC_INIT([icnova-demo],[1])
-AC_CONFIG_SRCDIR([icnova-demo.c])
-AM_INIT_AUTOMAKE
-AC_PROG_LIBTOOL
-AC_PROG_CC
-AC_OUTPUT(Makefile)
