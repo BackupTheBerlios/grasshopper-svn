@@ -18,5 +18,10 @@ prog: $(OBJ)
 crt0.o: crt0.S
 	avr32-gcc -c -mcpu=ap7000 -I. -I.. crt0.S
 
+
+download:
+	avr32-objcopy -O binary $(TARGET).elf $(TARGET).bin
+	avr32program program -v -e -f cfi@0 $(TARGET).bin
+
 clean:
 	rm *.o $(TARGET).elf
