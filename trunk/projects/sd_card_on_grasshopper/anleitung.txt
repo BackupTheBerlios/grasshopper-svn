@@ -1,0 +1,3 @@
+Wie schliesst man eine SD-Karte an den Grasshopper an?
+
+siehe Embedded Projects Journal Ausgabe 2

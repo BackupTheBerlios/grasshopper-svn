@@ -1,0 +1,17 @@
+du musst ein verzeichnis anlegen:
+> 
+> (ich habe es mit meinem homeverzeichnis gemacht, aber ich werde es  
+> schnell nochmal neu kompilieren damit es mit /usr/local/ funtioniert,  
+> ist sonst bloed wenn in einem kundenprojekt mein name vorkommt.)
+> 
+> mkdir - p /usr/local/
+> 
+> und dann einfach die sd-karte dahin mounten:
+> 
+> mount /dev/mmcblk0p1 /usr/local
+> export PATH=/usr/local/python/bin:$PATH
+> 
+> 
+> das wars schon... ABER; es funktioniert nicht mit jeder sd-karte! habe  
+> hier 2 verschiedene und habe es erst mit der einen ewig lang probiert,  
+> ging aber nicht. mit der anderen gehts...
